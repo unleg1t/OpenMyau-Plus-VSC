@@ -1,0 +1,18 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Java: Launch (Select Main Class)",
+      "request": "launch"
+    },
+    {
+      "type": "java",
+      "name": "Java: Attach to runClient (--debug-jvm)",
+      "request": "attach",
+      "hostName": "localhost",
+      "port": 5005,
+      "preLaunchTask": "Gradle: runClient (debug)"
+    }
+  ]
+}

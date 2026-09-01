@@ -47,6 +47,16 @@ scripting support.
 
 ---
 
+# Open in VS Code
+
+- Install a JDK 8 distribution (the project uses Java toolchain 8).
+- Open the cloned folder in VS Code and accept extension recommendations.
+- On first open, let the Java/Gradle import finish.
+- Run **Tasks: Run Task** → **Gradle: build** to build from the wrapper.
+- For debugging, start **Gradle: runClient (debug)** (task) and use **Java: Attach to runClient (--debug-jvm)** from Run and Debug.
+
+---
+
 # Scripting (Raven Script Loader)
 
 Script support comes from [`rsl/`](rsl/), a vendored copy of

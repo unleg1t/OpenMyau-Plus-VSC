@@ -59,6 +59,13 @@ sourceSets.main {
 }
 // Dependencies:
 repositories {
+    maven("https://bmclapi2.bangbang93.com/maven/") {
+        name = "BMCLAPI"
+        content {
+            includeGroup("com.mojang")
+            includeGroup("net.minecraft")
+        }
+    }
     mavenCentral()
     maven("https://repo.spongepowered.org/maven/")
     maven("https://repo.viaversion.com")
@@ -150,5 +157,4 @@ tasks.shadowJar {
     fun relocate(name: String) = relocate(name, "$baseGroup.deps.$name")
 }
 tasks.assemble.get().dependsOn(tasks.remapJar)
-
 
