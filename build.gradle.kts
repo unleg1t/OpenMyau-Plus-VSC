@@ -2,7 +2,7 @@ import org.apache.commons.lang3.SystemUtils
 plugins {
     idea
     java
-    id("gg.essential.loom") version "0.10.0.+"
+    id("dev.architectury.loom") version "0.11.0-SNAPSHOT"
     id("dev.architectury.architectury-pack200") version "0.1.3"
     id("com.github.johnrengelman.shadow") version "8.1.1"
 }
@@ -59,6 +59,13 @@ sourceSets.main {
 }
 // Dependencies:
 repositories {
+    maven("https://bmclapi2.bangbang93.com/maven/") {
+        name = "BMCLAPI"
+        content {
+            includeGroup("com.mojang")
+            includeGroup("net.minecraft")
+        }
+    }
     mavenCentral()
     maven("https://repo.spongepowered.org/maven/")
     maven("https://repo.viaversion.com")
@@ -150,5 +157,3 @@ tasks.shadowJar {
     fun relocate(name: String) = relocate(name, "$baseGroup.deps.$name")
 }
 tasks.assemble.get().dependsOn(tasks.remapJar)
-
-

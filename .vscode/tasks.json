@@ -1,0 +1,50 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Gradle: build",
+      "type": "shell",
+      "command": "${workspaceFolder}/gradlew",
+      "args": [
+        "build",
+        "--console=plain"
+      ],
+      "windows": {
+        "command": "${workspaceFolder}\\gradlew.bat"
+      },
+      "group": "build",
+      "problemMatcher": [
+        "$gradle"
+      ]
+    },
+    {
+      "label": "Gradle: runClient",
+      "type": "shell",
+      "command": "${workspaceFolder}/gradlew",
+      "args": [
+        "runClient"
+      ],
+      "windows": {
+        "command": "${workspaceFolder}\\gradlew.bat"
+      },
+      "problemMatcher": [
+        "$gradle"
+      ]
+    },
+    {
+      "label": "Gradle: runClient (debug)",
+      "type": "shell",
+      "command": "${workspaceFolder}/gradlew",
+      "args": [
+        "--debug-jvm",
+        "runClient"
+      ],
+      "windows": {
+        "command": "${workspaceFolder}\\gradlew.bat"
+      },
+      "problemMatcher": [
+        "$gradle"
+      ]
+    }
+  ]
+}

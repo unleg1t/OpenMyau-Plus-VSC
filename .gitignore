@@ -30,7 +30,11 @@ replay_pid*
 
 .idea
 .gradle
-.vscode
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
 run
 *.iml
 out
